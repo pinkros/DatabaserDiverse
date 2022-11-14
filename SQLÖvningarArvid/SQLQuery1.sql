@@ -16,7 +16,8 @@ VALUES
 	(4, 'Kanin');
 
 
-SELECT * FROM DjurTbl WHERE 'Namn' = '%';
+SELECT * FROM DjurTbl 
+WHERE [Namn] LIKE '%a%';
 
 
 DROP TABLE DjurTbl;
