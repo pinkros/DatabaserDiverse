@@ -1,4 +1,4 @@
---USE everyloop;
+USE everyloop;
 
 -- Ta ut data (select) från tabellen GameOfThrones på sådant sätt att ni får ut en 
 --kolumn ’Title’ med titeln samt en kolumn ’Episode’ som visar episoder och säsonger
@@ -76,20 +76,28 @@
 --(Dvs, återskapa den saknade kolumnen från RGBvärdena i resultatet).
 
 --SELECT * FROM Colors2;
---SELECT * INTO Colors2 FROM Colors;
+----SELECT * INTO Colors2 FROM Colors;
 
+
+----ALTER TABLE Colors2
+----DROP COLUMN Code;
 
 --ALTER TABLE Colors2
---DROP COLUMN Code;
+--ADD Code nvarchar(max);
 
---ALTER TABLE Colors2
---ADD Code varchar(255);
 
---UPDATE Colors2
---SET Code = '#' 
---	+ FORMAT(Red, 'X') 
---	+ FORMAT(Green, 'X') 
---	+ FORMAT(Blue, 'X');
+--SELECT
+--	[Name],
+--	Red,
+--	Green,
+--	Blue,
+--	CONVERT(VARBINARY(1),Red) + CONVERT(VARBINARY(1),Green) + CONVERT(VARBINARY(1),Blue)
+--	 AS Code
+--FROM Colors2;
+
+--SELECT
+
+--FROM Colors2;
 
 --Kopiera kolumnerna ”Integer” och ”String” från tabellen ”Types” 
 --till en ny tabell. Gör sedan en select från den nya 
