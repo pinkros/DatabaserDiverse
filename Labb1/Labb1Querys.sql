@@ -1,1 +1,5 @@
-CREATE DATABASE Labb1Db;
+--CREATE DATABASE Labb1Db;
+
+--USE Labb1Db;
+
+
