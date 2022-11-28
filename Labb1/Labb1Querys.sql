@@ -1,0 +1,1 @@
+CREATE DATABASE Labb1Db;
