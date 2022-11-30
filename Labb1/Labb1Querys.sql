@@ -18,4 +18,11 @@ USE Labb1Db;
 --FOREIGN KEY (FörfattarID) REFERENCES tbl_Författare(ID)
 --)
 
-
+CREATE TABLE tbl_Butiker(
+ID int IDENTITY(1,1) PRIMARY KEY,
+Namn nvarchar(max),
+Stad nvarchar(max),
+Gata nvarchar(max),
+Postnummer nvarchar(5),
+Ort nvarchar(max)
+)
