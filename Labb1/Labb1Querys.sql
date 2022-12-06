@@ -1,6 +1,6 @@
 --CREATE DATABASE Labb1Db;
 
---USE Labb1Db;
+USE Labb1Db;
 
 CREATE TABLE tbl_Författare(
 ID int IDENTITY(1,1) PRIMARY KEY,
@@ -49,12 +49,13 @@ Ort nvarchar(max)
 CREATE TABLE tbl_Ordrar(
 ID int IDENTITY(1,1) PRIMARY KEY,
 KundID int,
-ISBN varchar(13) CHECK (ISBN NOT LIKE '%[^0-9]%'),
+ISBN nvarchar(13) CHECK (ISBN NOT LIKE '%[^0-9]%'),
 ButiksID int,
 Antal int,
 OrderDatum date,
 FOREIGN KEY (KundID) REFERENCES tbl_Kunder(ID),
-FOREIGN KEY (ButiksID) REFERENCES tbl_Butiker(ID)
+FOREIGN KEY (ButiksID) REFERENCES tbl_Butiker(ID),
+FOREIGN KEY (ISBN) REFERENCES tbl_Böcker(ISBN)
 );
 --DROP TABLE tbl_Ordrar;
 --DROP TABLE tbl_LagerSaldo;
